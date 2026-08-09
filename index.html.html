@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#06070b">
+<meta name="description" content="M Abid — AiMAEditz. AI Creator, Prompt Engineer, Digital Creator and cinematic AI visual specialist.">
+<title>M Abid — AiMAEditz | AI Creator & Digital Portfolio</title>
+
+<style>
+/* =========================================================
+   M ABID — AiMAEDITZ
+   PREMIUM ONE-FILE PERSONAL PORTFOLIO
+   Responsive: Mobile / Tablet / Laptop / Large Desktop
+   ========================================================= */
+
+:root{
+  --bg:#05060a;
+  --bg2:#090b12;
+  --panel:rgba(255,255,255,.052);
+  --panel2:rgba(255,255,255,.075);
+  --border:rgba(255,255,255,.105);
+  --border2:rgba(255,255,255,.16);
+  --text:#f7f8ff;
+  --muted:#9da4b8;
+  --muted2:#747c91;
+  --purple:#8b5cf6;
+  --purple2:#a78bfa;
+  --cyan:#06b6d4;
+  --pink:#ec4899;
+  --green:#22c55e;
+  --shadow:0 28px 90px rgba(0,0,0,.48);
+  --radius:24px;
+  --max:1180px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 8% 4%,rgba(139,92,246,.16),transparent 28%),
+    radial-gradient(circle at 94% 14%,rgba(6,182,212,.11),transparent 28%),
+    radial-gradient(circle at 52% 92%,rgba(236,72,153,.08),transparent 34%),
+    linear-gradient(180deg,var(--bg),var(--bg2) 55%,#05060a);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.5;
+}
+body:before,body:after{
+  content:"";position:fixed;pointer-events:none;z-index:-2;border-radius:50%;
+  filter:blur(10px);
+}
+body:before{
+  width:520px;height:520px;left:-300px;top:12%;
+  background:radial-gradient(circle,rgba(139,92,246,.13),transparent 68%);
+}
+body:after{
+  width:500px;height:500px;right:-300px;bottom:8%;
+  background:radial-gradient(circle,rgba(6,182,212,.10),transparent 68%);
+}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+button{color:inherit}
+::selection{background:rgba(139,92,246,.38);color:#fff}
+
+.container{width:min(var(--max),calc(100% - 36px));margin:auto}
+.glass{
+  border:1px solid var(--border);
+  background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+.gradient{
+  background:linear-gradient(90deg,#fff 5%,#c4b5fd 34%,#67e8f9 66%,#f0abfc 96%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+/* NAV */
+.navbar{
+  position:sticky;top:0;z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.075);
+  background:rgba(5,6,10,.72);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+}
+.nav-inner{
+  width:min(var(--max),calc(100% - 36px));height:74px;margin:auto;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand-mark{
+  width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.14);border-radius:12px;
+  background:linear-gradient(135deg,rgba(139,92,246,.28),rgba(6,182,212,.18));
+  box-shadow:0 0 28px rgba(139,92,246,.18);
+  font-weight:900;
+}
+.brand-text{font-size:16px;font-weight:850;white-space:nowrap}
+.brand-text span{
+  background:linear-gradient(90deg,#fff,#c4b5fd,#67e8f9);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{
+  color:#aeb5c8;font-size:13px;font-weight:700;transition:.22s ease;
+}
+.nav-links a:hover{color:#fff}
+.nav-cta{
+  padding:10px 14px;border:1px solid rgba(139,92,246,.28);border-radius:12px;
+  background:rgba(139,92,246,.10);color:#ddd6fe!important;
+}
+.menu-btn{
+  display:none;width:40px;height:40px;border:1px solid var(--border);border-radius:12px;
+  background:rgba(255,255,255,.045);cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  position:relative;min-height:calc(100vh - 74px);display:grid;place-items:center;
+  padding:82px 0 75px;text-align:center;overflow:hidden;
+}
+.hero-orb{
+  position:absolute;width:min(620px,80vw);height:min(620px,80vw);border-radius:50%;
+  background:radial-gradient(circle,rgba(139,92,246,.16),rgba(6,182,212,.035) 42%,transparent 68%);
+  filter:blur(5px);z-index:-1;animation:pulse 7s ease-in-out infinite;
+}
+@keyframes pulse{50%{transform:scale(1.08);opacity:.82}}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 13px;
+  border:1px solid rgba(139,92,246,.28);border-radius:999px;
+  background:rgba(139,92,246,.08);color:#c4b5fd;font-size:11px;font-weight:800;
+  letter-spacing:1px;
+}
+.badge-dot{
+  width:7px;height:7px;border-radius:50%;background:#a78bfa;
+  box-shadow:0 0 14px #8b5cf6;
+}
+.hero h1{
+  max-width:1000px;margin:24px auto 0;
+  font-size:clamp(48px,8.2vw,92px);line-height:.96;letter-spacing:-5px;font-weight:950;
+}
+.hero h1 .small-line{display:block;font-size:.43em;line-height:1.2;letter-spacing:-1px;margin-bottom:8px;color:#b9c0d2}
+.hero-desc{
+  max-width:760px;margin:26px auto 0;color:var(--muted);
+  font-size:16px;line-height:1.85;
+}
+.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:46px;padding:12px 18px;border-radius:14px;border:1px solid var(--border);
+  font-size:13px;font-weight:800;transition:.25s ease;cursor:pointer;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{
+  border-color:rgba(139,92,246,.48);
+  background:linear-gradient(135deg,#7c3aed,#4f46e5);
+  box-shadow:0 14px 38px rgba(124,58,237,.28);
+}
+.btn-secondary{background:rgba(255,255,255,.045);color:#e9ebf4}
+.btn-secondary:hover{background:rgba(255,255,255,.08)}
+.hero-mini{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:28px;
+}
+.mini-chip{
+  padding:7px 10px;border:1px solid rgba(255,255,255,.08);border-radius:999px;
+  color:#8f97ab;font-size:10px;background:rgba(255,255,255,.025);
+}
+
+/* STATS */
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:-18px auto 95px;
+}
+.stat{
+  min-height:104px;padding:20px;text-align:center;border-radius:19px;
+}
+.stat strong{display:block;font-size:25px;letter-spacing:-.8px}
+.stat span{display:block;color:var(--muted2);font-size:10px;margin-top:5px}
+
+/* SECTIONS */
+.section{margin:0 auto 105px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}
+.eyebrow{
+  color:#a78bfa;text-transform:uppercase;font-size:10px;font-weight:900;
+  letter-spacing:1.7px;margin-bottom:7px;
+}
+.section h2{font-size:clamp(30px,5vw,47px);line-height:1;letter-spacing:-2.5px}
+.section-sub{color:var(--muted);font-size:13px;line-height:1.7;margin-top:10px;max-width:650px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+.about-card{padding:30px;border-radius:var(--radius)}
+.about-card h3{font-size:27px;letter-spacing:-1px;margin-bottom:12px}
+.about-card p{color:var(--muted);font-size:13px;line-height:1.85}
+.highlight{color:#ddd6fe;font-weight:800}
+.identity{
+  display:flex;align-items:center;gap:14px;margin-bottom:18px;
+}
+.avatar{
+  width:58px;height:58px;border-radius:17px;display:grid;place-items:center;
+  font-size:20px;font-weight:950;border:1px solid rgba(255,255,255,.13);
+  background:linear-gradient(135deg,rgba(139,92,246,.3),rgba(6,182,212,.2));
+  box-shadow:0 0 30px rgba(139,92,246,.14);
+}
+.identity h3{margin:0;font-size:22px}
+.identity span{color:#a78bfa;font-size:11px;font-weight:800}
+.info-list{display:grid;gap:10px;margin-top:20px}
+.info-row{
+  display:flex;justify-content:space-between;gap:15px;padding:11px 0;
+  border-bottom:1px solid rgba(255,255,255,.055);font-size:11px;
+}
+.info-row span:first-child{color:var(--muted2)}
+.info-row span:last-child{text-align:right;color:#d9ddec;font-weight:700}
+
+/* EXPERTISE */
+.expertise{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skill{
+  padding:22px;border-radius:20px;position:relative;overflow:hidden;transition:.28s ease;
+}
+.skill:before{
+  content:"";position:absolute;width:130px;height:130px;right:-65px;top:-65px;
+  border-radius:50%;background:rgba(139,92,246,.12);filter:blur(15px);
+}
+.skill:hover{transform:translateY(-5px);border-color:rgba(167,139,250,.27)}
+.skill-icon{
+  width:42px;height:42px;display:grid;place-items:center;border-radius:13px;
+  background:rgba(139,92,246,.11);border:1px solid rgba(139,92,246,.18);
+  font-size:19px;margin-bottom:16px;
+}
+.skill h3{font-size:16px;margin-bottom:7px}
+.skill p{color:var(--muted);font-size:11px;line-height:1.7}
+
+/* WORK */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.work{
+  min-height:190px;padding:22px;border-radius:21px;position:relative;overflow:hidden;
+  transition:.28s ease;
+}
+.work:hover{transform:translateY(-5px);border-color:rgba(103,232,249,.25)}
+.work-number{color:#60687d;font-size:10px;font-weight:900;letter-spacing:1px}
+.work h3{font-size:18px;margin:12px 0 7px}
+.work p{color:var(--muted);font-size:11px;line-height:1.7}
+.work-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tag{
+  padding:5px 8px;border-radius:999px;font-size:9px;color:#c4b5fd;
+  border:1px solid rgba(139,92,246,.17);background:rgba(139,92,246,.07);
+}
+
+/* SOCIALS */
+.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.social{
+  display:flex;align-items:center;gap:11px;padding:15px;border-radius:17px;
+  border:1px solid var(--border);background:rgba(255,255,255,.035);transition:.25s ease;
+}
+.social:hover{transform:translateY(-4px);background:rgba(255,255,255,.065);border-color:rgba(255,255,255,.17)}
+.social-icon{
+  width:38px;height:38px;display:grid;place-items:center;border-radius:11px;
+  background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(6,182,212,.10));
+  border:1px solid rgba(255,255,255,.09);font-size:15px;flex:0 0 38px;
+}
+.social-name{font-size:11px;font-weight:850}
+.social-handle{font-size:9px;color:var(--muted2);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* CONTACT */
+.contact{
+  padding:38px;border-radius:var(--radius);text-align:center;position:relative;overflow:hidden;
+}
+.contact:before{
+  content:"";position:absolute;inset:-40%;
+  background:radial-gradient(circle,rgba(139,92,246,.14),transparent 38%);
+  pointer-events:none;
+}
+.contact > *{position:relative}
+.contact h2{font-size:clamp(30px,5vw,48px);letter-spacing:-2.5px}
+.contact p{max-width:650px;margin:13px auto 0;color:var(--muted);font-size:13px;line-height:1.7}
+.email{
+  display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:12px 16px;
+  border:1px solid rgba(139,92,246,.25);border-radius:13px;
+  background:rgba(139,92,246,.08);color:#ddd6fe;font-weight:800;font-size:12px;
+}
+.contact-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:18px}
+
+/* FOOTER */
+footer{
+  margin-top:20px;border-top:1px solid rgba(255,255,255,.075);
+  padding:42px 18px;text-align:center;background:rgba(0,0,0,.14);
+}
+.footer-brand{font-size:17px;font-weight:900}
+.footer-brand span{color:#a78bfa}
+.footer-text{color:#747c91;font-size:10px;margin-top:7px}
+.footer-copy{color:#51596b;font-size:9px;margin-top:16px}
+
+/* TOP */
+.top{
+  position:fixed;right:18px;bottom:18px;z-index:900;width:42px;height:42px;
+  border:1px solid rgba(255,255,255,.13);border-radius:13px;
+  background:rgba(10,11,18,.78);backdrop-filter:blur(15px);
+  color:#d7dbea;cursor:pointer;opacity:0;pointer-events:none;transition:.25s ease;
+}
+.top.show{opacity:1;pointer-events:auto}
+.top:hover{transform:translateY(-3px);border-color:rgba(139,92,246,.35)}
+
+/* MOBILE NAV */
+.mobile-menu{
+  display:none;border-top:1px solid rgba(255,255,255,.07);padding:12px 18px 16px;
+  background:rgba(5,6,10,.94);
+}
+.mobile-menu.open{display:grid;gap:5px}
+.mobile-menu a{padding:11px 9px;color:#b5bccd;font-size:12px;font-weight:750;border-radius:10px}
+.mobile-menu a:hover{background:rgba(255,255,255,.05);color:#fff}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .social-grid{grid-template-columns:repeat(3,1fr)}
+  .expertise{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:800px){
+  .nav-links{display:none}
+  .menu-btn{display:grid;place-items:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .work-grid{grid-template-columns:repeat(2,1fr)}
+  .social-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .container,.nav-inner{width:min(100% - 24px,var(--max))}
+  .hero{min-height:auto;padding:66px 0 58px}
+  .hero h1{font-size:clamp(43px,14vw,68px);letter-spacing:-3.5px}
+  .hero-desc{font-size:12.5px;line-height:1.75;margin-top:19px}
+  .badge{font-size:9px;padding:7px 10px}
+  .hero-actions{margin-top:23px}
+  .btn{min-height:42px;padding:10px 14px;font-size:11px;border-radius:12px}
+  .hero-mini{margin-top:20px}
+  .mini-chip{font-size:8px;padding:5px 8px}
+  .stats{margin:0 auto 70px;gap:8px}
+  .stat{min-height:82px;padding:15px 8px;border-radius:15px}
+  .stat strong{font-size:19px}
+  .stat span{font-size:8px}
+  .section{margin-bottom:72px}
+  .section-head{display:block;margin-bottom:19px}
+  .section h2{font-size:32px;letter-spacing:-1.8px}
+  .section-sub{font-size:11px;margin-top:8px}
+  .about-card{padding:21px;border-radius:19px}
+  .about-card h3{font-size:22px}
+  .about-card p{font-size:11px}
+  .info-row{font-size:9px}
+  .identity h3{font-size:18px}
+  .identity span{font-size:9px}
+  .avatar{width:49px;height:49px;flex-basis:49px;border-radius:14px;font-size:17px}
+  .expertise,.work-grid{grid-template-columns:1fr}
+  .skill,.work{padding:18px;border-radius:17px}
+  .skill h3,.work h3{font-size:15px}
+  .skill p,.work p{font-size:10px}
+  .social-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .social{padding:11px 9px;gap:8px;border-radius:13px}
+  .social-icon{width:31px;height:31px;flex-basis:31px;font-size:12px;border-radius:9px}
+  .social-name{font-size:9px}
+  .social-handle{font-size:7.5px}
+  .contact{padding:25px 17px;border-radius:20px}
+  .contact h2{font-size:31px}
+  .contact p{font-size:10.5px}
+  .email{font-size:9px;padding:10px 12px}
+  footer{padding:33px 12px}
+  .top{width:36px;height:36px;right:12px;bottom:12px;border-radius:11px;font-size:12px}
+}
+@media(max-width:380px){
+  .brand-text{font-size:13px}
+  .brand-mark{width:34px;height:34px;flex-basis:34px}
+  .hero h1{font-size:42px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat strong{font-size:17px}
+  .social-name{font-size:8px}
+  .social-handle{font-size:7px}
+}
+
+/* EXTRA MOBILE POLISH */
+@media(max-width:600px){
+  .nav-inner{height:62px}
+  .brand{gap:8px}
+  .brand-text{font-size:14px;letter-spacing:-.2px}
+  .brand-mark{width:34px;height:34px;flex-basis:34px;border-radius:10px;font-size:14px}
+  .menu-btn{width:36px;height:36px;border-radius:10px;font-size:14px}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="#home" aria-label="M Abid home">
+      <div class="brand-mark">✦</div>
+      <div class="brand-text"><span>AiMAEditz</span></div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#socials">Platforms</a>
+      <a href="#contact" class="nav-cta">Contact ↗</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#work">Work</a>
+    <a href="#socials">Platforms</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="hero-orb"></div>
+  <div>
+    <div class="badge"><span class="badge-dot"></span> AI CREATOR · DIGITAL CREATIVE · PROMPT ENGINEER</div>
+
+    <h1>
+      <span class="small-line">AiMAEditz</span>
+      Create Beyond
+      <span class="gradient">Imagination.</span>
+    </h1>
+
+    <p class="hero-desc">
+      AI Creator, Prompt Engineer and Digital Creative focused on cinematic AI visuals,
+      ultra-realistic image & video concepts, creative prompts, digital editing and next-generation AI workflows.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">Explore My Work ↗</a>
+      <a href="#socials" class="btn btn-secondary">All Platforms</a>
+    </div>
+
+    <div class="hero-mini">
+      <span class="mini-chip">AI IMAGE</span>
+      <span class="mini-chip">AI VIDEO</span>
+      <span class="mini-chip">PROMPT ENGINEERING</span>
+      <span class="mini-chip">CINEMATIC</span>
+      <span class="mini-chip">DIGITAL CREATIVE</span>
+    </div>
+  </div>
+</section>
+
+<section class="container stats">
+  <div class="stat glass"><strong>8K+</strong><span>Visual Quality Focus</span></div>
+  <div class="stat glass"><strong>AI</strong><span>Creative Workflows</span></div>
+  <div class="stat glass"><strong>16+</strong><span>Creative Platforms</span></div>
+  <div class="stat glass"><strong>∞</strong><span>Ideas & Experiments</span></div>
+</section>
+
+<section class="container section" id="about">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Identity</div>
+      <h2>About <span class="gradient">M Abid.</span></h2>
+      <p class="section-sub">A premium creator profile built around AI, creativity, visual storytelling and digital creation.</p>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <article class="about-card glass">
+      <div class="eyebrow">Professional Profile</div>
+      <h3>Building ideas into <span class="gradient">visual experiences.</span></h3>
+      <p>
+        <span class="highlight">M Abid</span> is a digital creator working with
+        <span class="highlight">AI visuals, prompt engineering, cinematic concepts and digital editing</span>.
+        Through <span class="highlight">AiMAEditz</span>, the focus is on practical creative work,
+        visual experiments and AI-powered content.
+      </p>
+      <br>
+      <p>
+        This portfolio brings the main creative projects, platforms and digital work together
+        in one clean, professional space.
+      </p>
+    </article>
+
+    <aside class="about-card glass">
+      <div class="identity">
+        <div class="avatar">MA</div>
+        <div>
+          <h3>M Abid</h3>
+          <span>AiMAEditz</span>
+        </div>
+      </div>
+
+      <div class="info-list">
+        <div class="info-row"><span>Primary Identity</span><span>M Abid</span></div>
+        <div class="info-row"><span>Creator Brand</span><span>AiMAEditz</span></div>
+        <div class="info-row"><span>Focus</span><span>AI + Digital Creativity</span></div>
+        <div class="info-row"><span>Visual Direction</span><span>Cinematic / 8K+</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="container section" id="expertise">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Capabilities</div>
+      <h2>What I <span class="gradient">Create.</span></h2>
+      <p class="section-sub">Core creative areas represented by the portfolio and creator ecosystem.</p>
+    </div>
+  </div>
+
+  <div class="expertise">
+    <article class="skill glass">
+      <div class="skill-icon">✦</div>
+      <h3>AI Image Creation</h3>
+      <p>Ultra-realistic, cinematic, editorial, portrait, fashion, automotive and creative AI visual concepts.</p>
+    </article>
+    <article class="skill glass">
+      <div class="skill-icon">▶</div>
+      <h3>AI Video Concepts</h3>
+      <p>Cinematic image-to-video ideas, visual direction, motion concepts, scenes, effects and storytelling workflows.</p>
+    </article>
+    <article class="skill glass">
+      <div class="skill-icon">⌘</div>
+      <h3>Prompt Engineering</h3>
+      <p>Structured creative prompts designed for consistent, detailed and high-quality generative results.</p>
+    </article>
+    <article class="skill glass">
+      <div class="skill-icon">◎</div>
+      <h3>Cinematic Direction</h3>
+      <p>Lighting, camera language, composition, atmosphere, lens choices, depth and premium commercial aesthetics.</p>
+    </article>
+    <article class="skill glass">
+      <div class="skill-icon">✎</div>
+      <h3>Digital Editing</h3>
+      <p>Creative editing concepts, visual enhancement, social content and polished creator-oriented presentation.</p>
+    </article>
+    <article class="skill glass">
+      <div class="skill-icon">◈</div>
+      <h3>AI + Web Projects</h3>
+      <p>Creator websites, prompt libraries, digital tools and experimental AI-focused online experiences.</p>
+    </article>
+  </div>
+</section>
+
+<section class="container section" id="work">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Selected Work</div>
+      <h2>My Creative <span class="gradient">Universe.</span></h2>
+      <p class="section-sub">A structured view of the main project directions across the AiMAEditz ecosystem.</p>
+    </div>
+  </div>
+
+  <div class="work-grid">
+    <article class="work glass">
+      <div class="work-number">01 / AI PROMPTS</div>
+      <h3>AI Prompt Xpert</h3>
+      <p>Premium AI prompt library focused on image, video, cinematic and creative generative workflows.</p>
+      <div class="work-tags"><span class="tag">Prompts</span><span class="tag">AI Image</span><span class="tag">AI Video</span></div>
+    </article>
+
+    <article class="work glass">
+      <div class="work-number">02 / CREATOR HUB</div>
+      <h3>AiMAEditz</h3>
+      <p>A creator identity combining AI visuals, digital editing, social content and experimental creative projects.</p>
+      <div class="work-tags"><span class="tag">Creator</span><span class="tag">Editing</span><span class="tag">AI</span></div>
+    </article>
+
+    <article class="work glass">
+      <div class="work-number">03 / VISUAL STORY</div>
+      <h3>AI Story & Cinematic</h3>
+      <p>Visual storytelling directions built around cinematic scenes, miniature worlds, automotive visuals and imaginative concepts.</p>
+      <div class="work-tags"><span class="tag">Cinematic</span><span class="tag">Story</span><span class="tag">8K+</span></div>
+    </article>
+
+    <article class="work glass">
+      <div class="work-number">04 / WEB PROJECTS</div>
+      <h3>Digital Experiences</h3>
+      <p>Premium single-file web interfaces, creator hubs, prompt libraries and responsive digital experiences.</p>
+      <div class="work-tags"><span class="tag">HTML</span><span class="tag">UI</span><span class="tag">Responsive</span></div>
+    </article>
+
+    <article class="work glass">
+      <div class="work-number">05 / SOCIAL CREATIVE</div>
+      <h3>Creator Platforms</h3>
+      <p>Multi-platform creator presence across video, social, community, visual discovery and digital publishing.</p>
+      <div class="work-tags"><span class="tag">YouTube</span><span class="tag">TikTok</span><span class="tag">Instagram</span></div>
+    </article>
+
+    <article class="work glass">
+      <div class="work-number">06 / EXPERIMENTS</div>
+      <h3>AI Creative Lab</h3>
+      <p>Continuous experimentation with new AI tools, prompt systems, visual styles, workflows and creator utilities.</p>
+      <div class="work-tags"><span class="tag">AI Tools</span><span class="tag">Experiments</span><span class="tag">Creative</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="container section" id="socials">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Digital Presence</div>
+      <h2>Find Me <span class="gradient">Online.</span></h2>
+      <p class="section-sub">All major creator platforms and digital properties provided for this portfolio.</p>
+    </div>
+  </div>
+
+  <div class="social-grid">
+    <a class="social" href="https://www.youtube.com/@aimabideditz" target="_blank" rel="noopener"><div class="social-icon">▶</div><div><div class="social-name">YouTube</div><div class="social-handle">@aimabideditz</div></div></a>
+    <a class="social" href="https://www.youtube.com/@shortma29" target="_blank" rel="noopener"><div class="social-icon">▶</div><div><div class="social-name">YouTube Shorts</div><div class="social-handle">@shortma29</div></div></a>
+    <a class="social" href="https://www.youtube.com/@aimastoryedit" target="_blank" rel="noopener"><div class="social-icon">▶</div><div><div class="social-name">YouTube Story</div><div class="social-handle">@aimastoryedit</div></div></a>
+
+    <a class="social" href="https://www.instagram.com/its_abid29/" target="_blank" rel="noopener"><div class="social-icon">◎</div><div><div class="social-name">Instagram</div><div class="social-handle">@its_abid29</div></div></a>
+
+    <a class="social" href="https://www.tiktok.com/@mabideditz" target="_blank" rel="noopener"><div class="social-icon">♪</div><div><div class="social-name">TikTok</div><div class="social-handle">@mabideditz</div></div></a>
+    <a class="social" href="https://www.tiktok.com/@its_abid29" target="_blank" rel="noopener"><div class="social-icon">♪</div><div><div class="social-name">TikTok</div><div class="social-handle">@its_abid29</div></div></a>
+
+    <a class="social" href="https://www.facebook.com/fb.mabid/" target="_blank" rel="noopener"><div class="social-icon">f</div><div><div class="social-name">Facebook</div><div class="social-handle">M Abid</div></div></a>
+    <a class="social" href="https://www.facebook.com/aimaeditz" target="_blank" rel="noopener"><div class="social-icon">f</div><div><div class="social-name">Facebook Page</div><div class="social-handle">AiMAEditz</div></div></a>
+
+    <a class="social" href="https://github.com/aimaeditz" target="_blank" rel="noopener"><div class="social-icon">&lt;/&gt;</div><div><div class="social-name">GitHub</div><div class="social-handle">github.com/aimaeditz</div></div></a>
+
+    <a class="social" href="https://www.threads.com/@its_abid29" target="_blank" rel="noopener"><div class="social-icon">@</div><div><div class="social-name">Threads</div><div class="social-handle">@its_abid29</div></div></a>
+
+    <a class="social" href="https://www.pinterest.com/mabidrizvi/" target="_blank" rel="noopener"><div class="social-icon">P</div><div><div class="social-name">Pinterest</div><div class="social-handle">@mabidrizvi</div></div></a>
+
+    <a class="social" href="https://link.me/maeditz" target="_blank" rel="noopener"><div class="social-icon">↗</div><div><div class="social-name">Link Hub</div><div class="social-handle">MAEDITZ</div></div></a>
+
+    <a class="social" href="https://aipromptxpert.blogspot.com/" target="_blank" rel="noopener"><div class="social-icon">✦</div><div><div class="social-name">AI Prompt Xpert</div><div class="social-handle">aipromptxpert.blogspot.com</div></div></a>
+
+    <a class="social" href="https://aimaeditz.blogspot.com/" target="_blank" rel="noopener"><div class="social-icon">✦</div><div><div class="social-name">AiMAEditz Blog</div><div class="social-handle">aimaeditz.blogspot.com</div></div></a>
+
+    <a class="social" href="https://www.whatsapp.com/channel/0029Vb669jh11ulG8ttZ3K3s" target="_blank" rel="noopener"><div class="social-icon">◉</div><div><div class="social-name">WhatsApp Channel</div><div class="social-handle">AI Photo Prompts</div></div></a>
+
+    <a class="social" href="https://whatsapp.com/channel/0029Vb6p9rh0VycFC0DPn10f" target="_blank" rel="noopener"><div class="social-icon">◉</div><div><div class="social-name">WhatsApp Channel 2</div><div class="social-handle">AiMAEditz</div></div></a>
+
+    <a class="social" href="https://mobile.capcutshare.com/sv2/ZS4sjmfPx/" target="_blank" rel="noopener"><div class="social-icon">◈</div><div><div class="social-name">CapCut</div><div class="social-handle">Creator Link</div></div></a>
+  </div>
+</section>
+
+<section class="container section" id="contact">
+  <div class="contact glass">
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Let's Create Something <span class="gradient">Epic.</span></h2>
+    <p>
+      For AI creative work, prompts, digital projects, collaborations or creator-related opportunities,
+      connect through the platforms above or contact me directly.
+    </p>
+    <a class="email" href="mailto:aipromptxpert@gmail.com">✉ aipromptxpert@gmail.com</a>
+    <div class="contact-actions">
+      <a href="mailto:aipromptxpert@gmail.com" class="btn btn-primary">Email Me ↗</a>
+      <a href="https://link.me/maeditz" target="_blank" rel="noopener" class="btn btn-secondary">Open Link Hub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-brand"><span>AiMAEditz</span></div>
+  <p class="footer-text">AI Creator · Prompt Engineer · Digital Creator · Cinematic Visual Creative</p>
+  <p class="footer-copy">© <span id="year"></span> M Abid · AiMAEditz · Built with AI & Creativity</p>
+</footer>
+
+<button class="top" id="topBtn" aria-label="Back to top">↑</button>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const mobileMenu=document.getElementById("mobileMenu");
+const topBtn=document.getElementById("topBtn");
+
+menuBtn.addEventListener("click",()=>{
+  mobileMenu.classList.toggle("open");
+  menuBtn.textContent=mobileMenu.classList.contains("open")?"×":"☰";
+});
+
+document.querySelectorAll(".mobile-menu a").forEach(a=>{
+  a.addEventListener("click",()=>{
+    mobileMenu.classList.remove("open");
+    menuBtn.textContent="☰";
+  });
+});
+
+window.addEventListener("scroll",()=>{
+  topBtn.classList.toggle("show",window.scrollY>500);
+},{passive:true});
+
+topBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
