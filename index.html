@@ -691,7 +691,798 @@ topBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
+<!-- =====================================================
+     AiMAEditz — PREMIUM DARK / WHITE MODE
+     ORIGINAL DARK THEME REMAINS 100% DEFAULT
+     WHITE MODE ONLY ACTIVATES AFTER BUTTON CLICK
+===================================================== -->
 
+<style>
+
+/* =====================================================
+   WHITE MODE
+   IMPORTANT:
+   Nothing here affects the original dark mode.
+===================================================== */
+
+body.aima-white-mode{
+
+  /* Use the original site's existing variables,
+     but change them ONLY while white mode is active */
+
+  --bg:#f7f8fc !important;
+  --bg2:#eef1f7 !important;
+
+  --panel:rgba(255,255,255,.78) !important;
+  --panel2:rgba(255,255,255,.92) !important;
+
+  --border:rgba(15,23,42,.10) !important;
+  --border2:rgba(15,23,42,.16) !important;
+
+  --text:#111827 !important;
+  --muted:#5b6473 !important;
+  --muted2:#737d8d !important;
+
+  --shadow:0 24px 70px rgba(15,23,42,.10) !important;
+
+  color:var(--text) !important;
+
+  background:
+    radial-gradient(
+      circle at 8% 4%,
+      rgba(139,92,246,.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 94% 14%,
+      rgba(6,182,212,.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 52% 92%,
+      rgba(236,72,153,.06),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7f8fc 55%,
+      #eef1f7 100%
+    ) !important;
+}
+
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+body.aima-white-mode:before{
+  background:
+    radial-gradient(
+      circle,
+      rgba(139,92,246,.08),
+      transparent 68%
+    ) !important;
+}
+
+body.aima-white-mode:after{
+  background:
+    radial-gradient(
+      circle,
+      rgba(6,182,212,.06),
+      transparent 68%
+    ) !important;
+}
+
+
+/* =====================================================
+   GLASS CARDS
+===================================================== */
+
+body.aima-white-mode .glass{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.92),
+      rgba(255,255,255,.66)
+    ) !important;
+
+  border-color:
+    rgba(15,23,42,.10) !important;
+
+  box-shadow:
+    0 20px 55px rgba(15,23,42,.08) !important;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+body.aima-white-mode .navbar{
+
+  background:
+    rgba(255,255,255,.78) !important;
+
+  border-bottom:
+    1px solid rgba(15,23,42,.09) !important;
+
+  box-shadow:
+    0 8px 30px rgba(15,23,42,.05) !important;
+}
+
+body.aima-white-mode .nav-links a{
+  color:#4b5563 !important;
+}
+
+body.aima-white-mode .nav-links a:hover{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .nav-cta{
+  color:#5b21b6 !important;
+  background:rgba(139,92,246,.09) !important;
+  border-color:rgba(139,92,246,.22) !important;
+}
+
+body.aima-white-mode .brand-mark{
+  border-color:rgba(15,23,42,.10) !important;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+body.aima-white-mode .brand-text span{
+  background:
+    linear-gradient(
+      90deg,
+      #111827,
+      #7c3aed,
+      #0891b2
+    ) !important;
+
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  color:transparent !important;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+body.aima-white-mode .mobile-menu{
+
+  background:
+    rgba(255,255,255,.97) !important;
+
+  border-top-color:
+    rgba(15,23,42,.09) !important;
+}
+
+body.aima-white-mode .mobile-menu a{
+  color:#4b5563 !important;
+}
+
+body.aima-white-mode .mobile-menu a:hover{
+  background:rgba(15,23,42,.05) !important;
+  color:#111827 !important;
+}
+
+body.aima-white-mode .menu-btn{
+  background:rgba(255,255,255,.80) !important;
+  color:#111827 !important;
+  border-color:rgba(15,23,42,.12) !important;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+body.aima-white-mode .hero-orb{
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139,92,246,.13),
+      rgba(6,182,212,.035) 42%,
+      transparent 68%
+    ) !important;
+}
+
+body.aima-white-mode .hero h1{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .hero h1 .small-line{
+  color:#667085 !important;
+}
+
+body.aima-white-mode .hero-desc{
+  color:#5b6473 !important;
+}
+
+
+/* =====================================================
+   GRADIENT HEADINGS
+===================================================== */
+
+body.aima-white-mode .gradient{
+
+  background:
+    linear-gradient(
+      90deg,
+      #111827 5%,
+      #7c3aed 38%,
+      #0891b2 68%,
+      #c026d3 96%
+    ) !important;
+
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+
+  color:transparent !important;
+}
+
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+body.aima-white-mode .badge{
+  background:rgba(139,92,246,.07) !important;
+  border-color:rgba(139,92,246,.20) !important;
+  color:#6d28d9 !important;
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON
+===================================================== */
+
+body.aima-white-mode .btn-secondary{
+
+  background:
+    rgba(255,255,255,.88) !important;
+
+  color:#1f2937 !important;
+
+  border-color:
+    rgba(15,23,42,.12) !important;
+
+  box-shadow:
+    0 8px 25px rgba(15,23,42,.06) !important;
+}
+
+body.aima-white-mode .btn-secondary:hover{
+  background:#ffffff !important;
+}
+
+
+/* =====================================================
+   MINI CHIPS
+===================================================== */
+
+body.aima-white-mode .mini-chip{
+
+  color:#667085 !important;
+
+  background:
+    rgba(255,255,255,.70) !important;
+
+  border-color:
+    rgba(15,23,42,.09) !important;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+body.aima-white-mode .stat strong{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .stat span{
+  color:#737d8d !important;
+}
+
+
+/* =====================================================
+   SECTION TEXT
+===================================================== */
+
+body.aima-white-mode .section-sub{
+  color:#5b6473 !important;
+}
+
+body.aima-white-mode .eyebrow{
+  color:#7c3aed !important;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+body.aima-white-mode .about-card h3{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .about-card p{
+  color:#5b6473 !important;
+}
+
+body.aima-white-mode .highlight{
+  color:#5b21b6 !important;
+}
+
+body.aima-white-mode .identity h3{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .identity span{
+  color:#7c3aed !important;
+}
+
+body.aima-white-mode .info-row{
+  border-bottom-color:
+    rgba(15,23,42,.08) !important;
+}
+
+body.aima-white-mode .info-row span:first-child{
+  color:#737d8d !important;
+}
+
+body.aima-white-mode .info-row span:last-child{
+  color:#374151 !important;
+}
+
+body.aima-white-mode .avatar{
+  border-color:rgba(15,23,42,.10) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139,92,246,.16),
+      rgba(6,182,212,.12)
+    ) !important;
+}
+
+
+/* =====================================================
+   EXPERTISE
+===================================================== */
+
+body.aima-white-mode .skill h3{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .skill p{
+  color:#5b6473 !important;
+}
+
+body.aima-white-mode .skill-icon{
+  background:rgba(139,92,246,.08) !important;
+  border-color:rgba(139,92,246,.16) !important;
+}
+
+
+/* =====================================================
+   WORK
+===================================================== */
+
+body.aima-white-mode .work-number{
+  color:#737d8d !important;
+}
+
+body.aima-white-mode .work h3{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .work p{
+  color:#5b6473 !important;
+}
+
+body.aima-white-mode .tag{
+
+  color:#6d28d9 !important;
+
+  background:
+    rgba(139,92,246,.07) !important;
+
+  border-color:
+    rgba(139,92,246,.18) !important;
+}
+
+
+/* =====================================================
+   SOCIAL PLATFORMS
+===================================================== */
+
+body.aima-white-mode .social{
+
+  background:
+    rgba(255,255,255,.68) !important;
+
+  border-color:
+    rgba(15,23,42,.09) !important;
+}
+
+body.aima-white-mode .social:hover{
+
+  background:
+    rgba(255,255,255,.96) !important;
+
+  border-color:
+    rgba(15,23,42,.15) !important;
+}
+
+body.aima-white-mode .social-name{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .social-handle{
+  color:#737d8d !important;
+}
+
+body.aima-white-mode .social-icon{
+
+  border-color:
+    rgba(15,23,42,.08) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139,92,246,.10),
+      rgba(6,182,212,.07)
+    ) !important;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+body.aima-white-mode .contact h2{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .contact p{
+  color:#5b6473 !important;
+}
+
+body.aima-white-mode .email{
+
+  color:#5b21b6 !important;
+
+  background:
+    rgba(139,92,246,.07) !important;
+
+  border-color:
+    rgba(139,92,246,.20) !important;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+body.aima-white-mode footer{
+
+  background:
+    rgba(255,255,255,.55) !important;
+
+  border-top-color:
+    rgba(15,23,42,.09) !important;
+}
+
+body.aima-white-mode .footer-brand{
+  color:#111827 !important;
+}
+
+body.aima-white-mode .footer-text{
+  color:#737d8d !important;
+}
+
+body.aima-white-mode .footer-copy{
+  color:#9aa2af !important;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+body.aima-white-mode .top{
+
+  background:
+    rgba(255,255,255,.90) !important;
+
+  color:#374151 !important;
+
+  border-color:
+    rgba(15,23,42,.12) !important;
+}
+
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+body.aima-white-mode ::selection{
+  background:rgba(124,58,237,.20) !important;
+  color:#111827 !important;
+}
+
+
+/* =====================================================
+   IMAGES
+   NEVER MODIFY IMAGES
+===================================================== */
+
+body.aima-white-mode img{
+  filter:none !important;
+  opacity:1 !important;
+}
+
+
+/* =====================================================
+   PREMIUM MODE BUTTON
+===================================================== */
+
+#aima-mode-button{
+
+  position:fixed;
+
+  left:18px;
+  bottom:24px;
+
+  width:48px;
+  height:48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,.18);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,20,28,.96),
+      rgba(5,6,10,.94)
+    );
+
+  color:#ffffff;
+
+  font-size:20px;
+  line-height:1;
+
+  cursor:pointer;
+
+  z-index:999999;
+
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+
+  box-shadow:
+    0 0 8px rgba(139,92,246,.30),
+    0 0 22px rgba(6,182,212,.16),
+    0 10px 30px rgba(0,0,0,.40);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease,
+    color .25s ease;
+}
+
+#aima-mode-button:hover{
+
+  transform:
+    translateY(-3px) scale(1.06);
+
+  box-shadow:
+    0 0 12px rgba(139,92,246,.50),
+    0 0 30px rgba(6,182,212,.25),
+    0 12px 35px rgba(0,0,0,.45);
+}
+
+#aima-mode-button:active{
+  transform:scale(.92);
+}
+
+
+/* =====================================================
+   BUTTON WHEN WHITE MODE IS ACTIVE
+===================================================== */
+
+body.aima-white-mode #aima-mode-button{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.98),
+      rgba(238,241,247,.94)
+    ) !important;
+
+  color:#111827 !important;
+
+  border-color:
+    rgba(15,23,42,.12) !important;
+
+  box-shadow:
+    0 0 8px rgba(139,92,246,.22),
+    0 0 22px rgba(6,182,212,.12),
+    0 10px 28px rgba(15,23,42,.16);
+}
+
+body.aima-white-mode #aima-mode-button:hover{
+
+  box-shadow:
+    0 0 12px rgba(139,92,246,.35),
+    0 0 28px rgba(6,182,212,.18),
+    0 12px 32px rgba(15,23,42,.18);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  #aima-mode-button{
+
+    left:12px;
+    bottom:16px;
+
+    width:40px;
+    height:40px;
+
+    font-size:17px;
+  }
+
+}
+
+@media(max-width:380px){
+
+  #aima-mode-button{
+
+    left:10px;
+    bottom:13px;
+
+    width:37px;
+    height:37px;
+
+    font-size:16px;
+  }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     MODE BUTTON
+===================================================== -->
+
+<button
+  id="aima-mode-button"
+  type="button"
+  aria-label="Switch between Dark and White Mode"
+  title="Dark / White Mode">
+  ☀
+</button>
+
+
+<script>
+(function(){
+
+  const body = document.body;
+  const button = document.getElementById("aima-mode-button");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  if(!button) return;
+
+
+  /* ===================================================
+     ORIGINAL DEFAULT = DARK
+     No class means the original website is untouched.
+  =================================================== */
+
+  const savedMode = localStorage.getItem("AiMAEditzTheme");
+
+  function setWhiteMode(){
+
+    body.classList.add("aima-white-mode");
+
+    button.textContent = "☾";
+
+    button.setAttribute(
+      "aria-label",
+      "Switch to Dark Mode"
+    );
+
+    if(themeMeta){
+      themeMeta.setAttribute(
+        "content",
+        "#f7f8fc"
+      );
+    }
+
+  }
+
+
+  function setDarkMode(){
+
+    body.classList.remove("aima-white-mode");
+
+    button.textContent = "☀";
+
+    button.setAttribute(
+      "aria-label",
+      "Switch to White Mode"
+    );
+
+    if(themeMeta){
+      themeMeta.setAttribute(
+        "content",
+        "#06070b"
+      );
+    }
+
+  }
+
+
+  /* First visit:
+     ORIGINAL DARK MODE remains exactly as it is.
+  */
+
+  if(savedMode === "white"){
+    setWhiteMode();
+  }else{
+    setDarkMode();
+  }
+
+
+  /* ===================================================
+     CLICK
+  =================================================== */
+
+  button.addEventListener("click",function(){
+
+    if(body.classList.contains("aima-white-mode")){
+
+      setDarkMode();
+
+      localStorage.setItem(
+        "AiMAEditzTheme",
+        "dark"
+      );
+
+    }else{
+
+      setWhiteMode();
+
+      localStorage.setItem(
+        "AiMAEditzTheme",
+        "white"
+      );
+
+    }
+
+  });
+
+})();
+</script>
    
 </body>
 </html>
